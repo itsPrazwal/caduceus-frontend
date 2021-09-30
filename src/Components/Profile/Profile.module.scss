@@ -1,0 +1,27 @@
+@import "src/Components/Styles/variables";
+
+.profileLabelInputWrapper{
+  .profileLabel{
+    color: $gray-800;
+    width: 300px;
+  }
+  .profileUnEditableValue{
+    color: $black;
+  }
+  .profileInput{
+    width: 540px;
+    border-radius: 6px;
+  }
+  .profileCheckBoxWrapper{
+    margin-top: 10px;
+    color: $gray-700;
+    input{
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+  select{
+    height: 50px;
+  }
+}

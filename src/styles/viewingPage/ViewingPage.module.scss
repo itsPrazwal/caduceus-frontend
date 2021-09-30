@@ -1,0 +1,103 @@
+@import "src/Components/Styles/variables";
+
+.viewingPageWrapper{
+  margin-top: -4vh;
+  .viewingPageImageWrapper{
+    position: relative;
+    width: 100%;
+    height: 89vh;
+    .viewingPageImageContentWrapper{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(180deg, transparent 0%, darken($primary-dark, 15) 100%);
+      color: $white;
+      padding: 30px 0;
+      height: 40%;
+      .viewingPageName{
+        margin: 0;
+      }
+      .viewingPageImageContentDivider{
+        margin: 10px 0 20px 0;
+        width: 10%;
+        height: 3px;
+        background: $white;
+      }
+      button{
+        color: $white;
+        border: 1px solid $white;
+        margin: 0 10px;
+      }
+    }
+  }
+  .viewingPageContentTabWrapper{
+    margin: 50px 0 20px 0;
+    justify-content: center;
+  }
+  .viewingPageContentContainer{
+    width: 100%;
+    padding: 0 10%;
+    margin-top: 20px;
+    .viewingPageContentWrapper{
+      width: 68%;
+      box-shadow: $shadow-base;
+      border-radius: 20px;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      .viewingPageContentTitle{
+        color: $text-gray;
+        strong{
+          color: $black;
+        }
+      }
+      .viewingPageContentDescription{
+        color: $text-gray;
+      }
+    }
+    .viewingPageContentList{
+      height: 50px;
+      .viewingPageContentListItem{
+        width: 25%;
+        height: 100%;
+        font-size: $font-size-lg;
+        span{
+          display: inline-flex;
+          background: $primary-dark;
+          color: white;
+          height: 100%;
+          width: 50px;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+        }
+      }
+    }
+    .viewingPageSideContentWrapper{
+      box-shadow: $shadow-base;
+      border-radius: 20px;
+      width: 29%;
+      padding: 20px;
+      box-sizing: border-box;
+      height: 100%;
+      .viewingPageSideContentTopic{
+        margin-bottom: 0;
+        color: $text-gray;
+      }
+      .viewingPageSideContentInfo{
+        margin: 5px 0 0 0;
+        color: $gray-600;
+      }
+      button{
+        width: 100%;
+        margin: 30px 0 10px 0;
+      }
+    }
+    .viewingPageNoInfo{
+      &::before{
+        content: '# ';
+      }
+      color: darken($warning, 10);
+    }
+  }
+}
+

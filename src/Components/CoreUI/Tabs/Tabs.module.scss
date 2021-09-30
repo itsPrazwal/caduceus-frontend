@@ -1,0 +1,48 @@
+@import "src/Components/Styles/variables";
+
+.tabContainer {
+  height: inherit;
+  width: inherit;
+  position: relative;
+  .tabNavigation{
+    height: 120px;
+    width: 100%;
+    .tabSpan {
+      padding: 20px 30px;
+      background-color: transparent;
+      font-size: $font-size-lg;
+      color: $gray-600;
+      transition: 0.5s;
+      cursor: pointer;
+      box-sizing: border-box;
+      &:hover,
+      &.activeTab{
+        color: $primary-color;
+      }
+      &.activeTab{
+        font-size: $font-size-xl;
+        font-weight: bold;
+        border-bottom: 5px solid $primary-color;
+      }
+    }
+  }
+
+  .tabContent {
+    padding: 20px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $gray-300;
+      border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $primary-color;
+      border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: $primary-color;
+    }
+  }
+}

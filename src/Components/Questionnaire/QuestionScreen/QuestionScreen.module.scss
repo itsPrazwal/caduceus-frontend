@@ -1,0 +1,70 @@
+@import "../../Styles/variables";
+
+.questionScreenWrapper{
+  width: 100%;
+  .questionScreenQuestion{
+    font-size: 80px;
+    font-style: normal;
+    line-height: 89px;
+    letter-spacing: 0.30454546213150024px;
+    text-align: left;
+    margin-top: 0;
+    &::first-line{
+      font-weight: 900;
+    }
+    @media screen and (max-width: $screen-sm) {
+      width: 500px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+    @media screen and (min-width: $screen-sm) {
+      width: 500px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+    @media screen and (min-width: $screen-md) {
+      width: 650px;
+      font-size: 60px;
+      line-height: 67px;
+    }
+    @media screen and (min-width: $screen-xl) {
+      width: 1000px;
+      font-size: 70px;
+      line-height: 77px;
+    }
+    @media screen and (min-width: $screen-xxl) {
+      width: $screen-xxl * 0.80;
+      font-size: 80px;
+      line-height: 89px;
+    }
+  }
+  .questionScreenAnswersWrapper{
+    width: 100%;
+    overflow: auto;
+    height: 300px;
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $gray-200;
+      border-radius: 20px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $gray-300;
+      border-radius: 20px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: $gray-500;
+    }
+    .questionScreenAnswers{
+      position: relative;
+      .questionScreenAnswer{
+        margin-right: 50px;
+      }
+    }
+  }
+
+  .questionScreenInput{
+    width: 50%;
+  }
+}

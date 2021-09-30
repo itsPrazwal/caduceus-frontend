@@ -1,0 +1,40 @@
+@import "src/Components/Styles/variables";
+
+.bloodDonorCardWrapper{
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: $shadow-base;
+  .bloodDonorCardImage{
+    width: 100px;
+    height: 100px;
+    border-radius: 500px;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .bloodDonorCardButton{
+    padding: 5px 20px;
+    min-width: inherit;
+    font-weight: normal;
+    &.buttonPending{
+      color: $warning;
+      border-color: $warning;
+    }
+    &.buttonAccepted{
+      color: $success;
+      border-color: $success;
+    }
+    &.buttonDeclined{
+      color: $danger;
+      border-color: $danger;
+    }
+  }
+  .bloodDonorCardBloodGroup{
+    margin: 0;
+  }
+  .bloodDonorCardName{
+    margin: 10px 0 0;
+    color: $gray-700;
+  }
+}

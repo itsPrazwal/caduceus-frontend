@@ -1,0 +1,14 @@
+@import "src/Components/Styles/variables";
+
+.questionFlowWrapper {
+  width: 100%;
+  padding: $common-padding;
+  height: 100%;
+  overflow: hidden;
+}
+.questionFlowFooter {
+  width: 100%;
+  padding: 0 7%;
+  position: absolute;
+  bottom: 10vh;
+}

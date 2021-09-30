@@ -1,0 +1,25 @@
+@import "src/Components/Styles/variables";
+
+.dataCarouselWrapper{
+  padding: $common-padding;
+  width: 100%;
+  overflow: visible;
+  .dataCarouselContentWrapper{
+    color: $white;
+    overflow: visible;
+    width: 100%;
+    transition: 0.5s;
+    &:hover{
+      &.contentLengthMax{ width: 100% }
+      &.contentLengthOver{ width: 114% }
+    }
+  }
+  .dataCarouselSeeAllLink{
+    color: $primary-dark;
+    transition: 0.5s;
+    font-size: $font-size-md;
+    &:hover{
+      font-size: $font-size-lg;
+    }
+  }
+}

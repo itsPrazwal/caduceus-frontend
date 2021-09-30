@@ -1,0 +1,42 @@
+@import "src/Components/Styles/variables";
+
+.listCardWrapper{
+  height: 500px;
+  width: 22%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin: 1.5%;
+  color: darken($primary-dark, 0.5);
+  box-shadow: $shadow-base;
+  cursor: pointer;
+  box-sizing: border-box;
+  &:hover{
+    border: 2px solid transparentize($primary-dark, 0.5);
+  }
+  .listCardImage{
+    position: relative;
+  }
+  .listCardBlur{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    background: transparentize($white, 0.8);
+    backdrop-filter: blur(5px);
+    border-top: 1px dashed $primary-dark;
+  }
+  .listCardContentWrapper{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: transparentize($white, 0.4);
+    padding: 22px;
+    height: 30%;
+    .listCardTitle{
+      margin: 0;
+      min-height: 65px;
+    }
+  }
+}
+

@@ -1,0 +1,39 @@
+@import "../../Components/Styles/variables";
+
+.questionnairePage{
+  height: 100%;
+  width: 100%;
+  .questionnaireHeader{
+    width: 100%;
+    height: 11vh;
+    background: $gray-400;
+    font-family: $font-mulish;
+    color: $text-gray;
+    .logoAndStepWrapper{
+      border-bottom: 7px solid $gray-600;
+      width: 27%;
+      height: 100%;
+      svg{
+        height: 70%;
+      }
+      .stepper{
+        font-size: $font-size-md;
+        font-weight: 400;
+        letter-spacing: 0.0025em;
+        text-align: left;
+      }
+    }
+    .rightSide{
+      width: 73%;
+      border-bottom: 7px solid $black;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .stepperScreenWrapper{
+    width: 100%;
+    height: 89vh;
+  }
+}
+

@@ -1,0 +1,62 @@
+@import "src/Components/Styles/variables";
+
+.departmentFilterWrapper{
+  margin-bottom: 30px;
+  .departmentFilterButton{
+    min-width: 120px;
+    height: 50px;
+    padding: 0;
+  }
+  .departmentFilterInput{
+    width: 500px;
+    height: 50px;
+  }
+}
+.departmentSubmitButton{
+
+}
+
+.departmentCardContainer{
+  margin-top: 30px;
+  .departmentCardWrapper{
+    position: relative;
+    width: 31.33%;
+    margin: 0 1% 20px 1%;
+    box-sizing: border-box;
+    height: 70px;
+    box-shadow: 5px 0 20px 0 $gray-400;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover{
+      .departmentCardImage{
+        width: 30px;
+      }
+    }
+    .departmentCardActive{
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $success;
+      padding: 5px 7px;
+      border-radius: 0 0 0 10px;
+    }
+    .departmentCardImage{
+      transition: 0.5s;
+      position: relative;
+      height: 70px;
+      width: 20px;
+      background: $primary-dark;
+      box-shadow: 2px 0 10px 0 $primary-dark;
+    }
+    .departmentCardName{
+      margin-left: 20px;
+      letter-spacing: 0.5px;
+      font-size: $font-size-md;
+      &:first-letter{
+        font-weight: bold;
+      }
+    }
+  }
+
+}

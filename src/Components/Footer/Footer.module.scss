@@ -1,0 +1,47 @@
+@import "../Styles/variables";
+
+.landingPageFooterWrapper{
+  padding: 80px 7%;
+  background: $primary-dark;
+  color: $white;
+  min-height: 550px;
+  .landingPageFooterContentWrapper{
+    width: 22%;
+    &.landingPageFooterFirstContent{
+      width: 34%;
+      .landingPageFooterCompanyDetails{
+        line-height: 30px;
+        margin: 0;
+      }
+    }
+    .landingPageFooterContentTitle{
+      margin: 0 0 30px 0;
+      color: #FFD2DD;
+    }
+    .landingPageFooterContentNavWrapper{
+      .landingPageFooterContentNav{
+        margin-bottom: 30px;
+        &:hover{
+          color: darken($white, 10%);
+        }
+      }
+    }
+  }
+  .landingPageFooterBottomWrapper{
+    h5{
+      margin: 0;
+    }
+    .landingPageFooterBottomNav{
+      margin-right: 60px;
+      &:hover{
+        color: darken($white, 10%);
+      }
+    }
+    .landingPageFooterBottomSocialNav{
+      margin-left: 60px;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+}

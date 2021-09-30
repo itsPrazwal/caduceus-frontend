@@ -1,0 +1,61 @@
+@import "../../Styles/variables";
+.authPageLogoWrapper{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 100px;
+  width: 100px;
+  svg{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+.authWrapper{
+  background: $auth-background;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-family: $font-mulish !important;
+  .authContentWrapper{
+    max-width: 600px;
+    min-width: 400px;
+    .authInfoWrapper{
+      margin-bottom: 40px;
+      .authTopic{
+        color: $auth-topic-color;
+        margin: 0 0 20px 0;
+        font-size: $font-size-xxl;
+        font-weight: 900;
+      }
+      .authDescription{
+        color: $auth-description-color;
+        margin: 0;
+        font-size: $font-size-md;
+        font-weight: 400;
+        line-height: $font-size-lg;
+      }
+    }
+    .authSubItemsWrapper{
+      margin-top: 40px;
+      .authSubItemDetail{
+        color: $gray-600;
+        font-size: $font-size-md;
+        margin: 0 0 20px 0;
+        a{
+          color: $primary-dark;
+          text-decoration: none;
+          font-weight: 400;
+          &:hover,
+          &:focus{
+            color: darken($primary-dark, 10);
+            outline: none;
+          }
+        }
+      }
+    }
+    button[type='submit']{
+      margin: 20px auto 0 auto;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../Styles/variables";
+
+.welcomeScreenWrapper {
+  padding: 0 25%;
+  text-align: center;
+  color: $text-gray;
+  .welcomeScreenLogoWrapper{
+    margin-top: 70px;
+  }
+  .welcomeScreenDescription{
+    width: 80%;
+    margin: auto;
+    color: $gray-600;
+    height: 220px;
+    overflow: hidden;
+  }
+}

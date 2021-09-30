@@ -1,0 +1,93 @@
+@mixin buttons($declineButton: true) {
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  letter-spacing: 0.07rem;
+  cursor: pointer;
+
+  @if $declineButton {
+    background-color: #d11a2a;
+    &:hover {
+      background-color: #ac0614;
+    }
+  } @else {
+    background-color: rgb(42, 99, 204);
+    &:hover {
+      background-color: rgb(0, 60, 170);
+    }
+  }
+}
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+
+  .modalContainer {
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .modalCloseBar {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.35);
+
+      &:hover {
+        color: rgba(0, 0, 0);
+      }
+    }
+  }
+
+  .modalTitle {
+    display: inline-block;
+  }
+
+  .modalBody {
+    flex: 50%;
+    display: flex;
+    justify-content: flex-start;
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .modalFooter {
+    flex: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .primaryButton {
+      @include buttons($declineButton: false);
+    }
+
+    .declineButton {
+      @include buttons($declineButton: true);
+    }
+  }
+}

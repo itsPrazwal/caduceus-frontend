@@ -1,0 +1,103 @@
+@import "src/Components/Styles/variables";
+
+.requestWrapper{
+  height: 81vh;
+  overflow: auto;
+  .requestCardContainer{
+    margin: -20px;
+    .requestCardWrapper{
+      .requestCardInfoWrapper{
+        position: relative;
+        padding: 10px;
+        .requestCardImage{
+          height: 70px;
+          width: 70px;
+          margin-right: 20px;
+        }
+        .requestCardBloodGroup{
+          margin: 0 20px 0 0;
+          color: $blood-color;
+        }
+        .requestCardName{
+          margin: 0 20px 0 0;
+        }
+        .requestCardContactInfo{
+          color: $gray-700;
+          margin-left: 10px;
+        }
+        .requestCardStatusOrActionWrapper{
+          position: absolute;
+          top: 0;
+          right: 0;
+          button{
+            min-width: inherit;
+            padding: 5px 10px;
+            font-weight: normal;
+            &.requestAccepted{
+              color: $success;
+              border-color: $success;
+              margin-right: 10px;
+              &.requestActionSelected{
+                color: $white;
+                background: $success;
+              }
+            }
+            &.requestDeclined{
+              color: $danger;
+              border-color: $danger;
+              margin-left: 10px;
+              &.requestActionSelected{
+                color: $white;
+                background: $danger;
+              }
+            }
+          }
+          .requestCardStatus{
+            padding: 5px 20px 10px 30px;
+            letter-spacing: 1px;
+            font-size: $font-size-md;
+            border-radius: 0 0 0 50px;
+            &.requestPending{
+              background: $warning;
+            }
+            &.requestAccepted{
+              background: $success;
+              color: $white;
+            }
+            &.requestDeclined{
+              background: $danger;
+              color: $white;
+            }
+          }
+        }
+      }
+      .requestCardMessage{
+        padding-left: 100px;
+        color: $gray-700;
+      }
+      .requestCardForm{
+        width: 100%;
+        position: relative;
+        margin-top: 20px;
+        .requestCardFormTextArea{
+          padding: 10px 0 ;
+          height: 120px;
+          textarea{
+            padding-right: 200px;
+          }
+        }
+        button{
+          position: absolute;
+          right: 10px;
+          padding: 10px 20px;
+          &[type=submit]{
+            top: 10px;
+          }
+          &[type=button]{
+            bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

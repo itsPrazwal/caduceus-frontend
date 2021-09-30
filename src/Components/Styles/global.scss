@@ -1,0 +1,71 @@
+@import "variables";
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: $font-default;
+	height: 100%;
+	#__next{
+		height: 100%;
+	}
+	ul{
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
+		padding-inline-start: 0;
+		li{
+			list-style: none;
+			text-decoration: none;
+		}
+	}
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+	.hasXScrollBar{
+		&::-webkit-scrollbar {
+			height: 6px;
+		}
+		&::-webkit-scrollbar-track {
+			background: $gray-300;
+			border-radius: 8px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: $primary-color;
+			border-radius: 8px;
+		}
+		&::-webkit-scrollbar-thumb:hover {
+			background: $primary-color;
+		}
+	}
+	.hasYScrollBar{
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+		&::-webkit-scrollbar-track {
+			background: $gray-300;
+			border-radius: 8px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: $primary-color;
+			border-radius: 8px;
+		}
+		&::-webkit-scrollbar-thumb:hover {
+			background: $primary-color;
+		}
+	}
+	.listPageTopic{
+		text-align: center;
+		width: 50%;
+		margin: 0 auto 50px auto;
+		letter-spacing: 1px;
+		border-bottom: 2px solid $primary-color;
+		line-height: 80px;
+		color: $gray-700;
+		strong{
+			color: $primary-dark;
+		}
+	}
+}

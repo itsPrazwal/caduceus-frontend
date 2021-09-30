@@ -1,0 +1,31 @@
+@import "../Styles/variables";
+
+.answerCardWrapper{
+  background: $wash;
+  height: 275px;
+  width: 240px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  border: 5px solid transparentize($primary-color, 0.8);
+  box-sizing: border-box;
+  &:hover{
+    box-shadow: 0 59.9625px 133.25px #0000001A;
+  }
+  .selectIconWrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .answerCardAnswer{
+    font-family: $font-mulish;
+    font-size: $font-size-md;
+    font-weight: 600;
+    letter-spacing: 0.0025em;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+}

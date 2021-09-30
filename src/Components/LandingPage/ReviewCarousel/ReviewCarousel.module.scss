@@ -1,0 +1,39 @@
+@import "src/Components/Styles/variables";
+
+.landingPageReviewWrapper{
+  padding: $common-padding;
+  height: 100%;
+  .landingPageReviewTitle{}
+  .landingPageReviewContentWrapper{
+    width: 100%;
+    height: 85%;
+    .landingPageReviewLeft{
+      width: 50%;
+      height: 90%;
+      background: $primary-dark;
+      border-radius: 10px;
+      padding: 45px 90px;
+      color: $white;
+      .landingPageReviewRating{
+        svg{
+          margin-left: 3px;
+        }
+      }
+      .landingPageReviewDescription{
+        font-size: $font-size-md;
+        line-height: 40px;
+        margin: 7px 0 14px 0;
+        overflow: hidden;
+      }
+      .landingPageReviewReviewer{
+        margin: 0;
+      }
+    }
+    .landingPageReviewRight{
+      width: 50%;
+      height: 100%;
+      position: relative;
+    }
+  }
+}
+

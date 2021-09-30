@@ -1,0 +1,70 @@
+@import "src/Components/Styles/variables";
+
+.bloodDonorPageWrapper{
+  .bloodDonorPageTitle{}
+  .bloodDonorFilterWrapper{
+    margin-bottom: 50px;
+    box-shadow: $shadow-base;
+    padding: 20px;
+    border-radius: 20px;
+    .bloodDonorFilterTab{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 500px;
+      margin: 0 10px;
+      position: relative;
+      color: #790000;
+      &:hover,
+      &.bloodDonorFilterTabActive{
+        font-size: $font-size-lg;
+        color: #ec1c24;
+        &>span{
+          display: inline-block;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          border-radius: 500px;
+          background: transparent;
+          border-right: 2px solid #ec1c24;
+          border-left: 2px solid #ec1c24;
+          animation: spin 2000ms linear infinite;
+
+        }
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    .bloodDonorFilterButton{
+      margin-left: 20px;
+      color: #790000;
+      border-color: #790000;
+      min-width: inherit;
+      padding: 6px 20px;
+      &:hover{
+        color: #ec1c24;
+        border-color: #ec1c24;
+      }
+    }
+  }
+  .bloodDonorListWrapper{
+    width: 80%;
+    .bloodDonorListCard{
+      width: 23.5%;
+      margin: 0 0 20px 2%;
+      &.bloodDonorListStartCard{
+        margin: 0;
+      }
+    }
+  }
+}

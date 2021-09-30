@@ -1,0 +1,140 @@
+@import "../../Styles/variables";
+
+.headerContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  .headerContentWrapper{
+    height: 11vh;
+    background: $gray-200;
+    box-shadow: $shadow-base;
+    padding: 0 60px;
+    .headerLeftSide{
+      height: 100%;
+      a{
+        height: 70%;
+        margin-right: 40px;
+        svg{
+          height: 100%;
+        }
+      }
+      .headerActionButton{
+        font-weight: normal;
+        color: $primary-dark;
+        letter-spacing: 0.1px;
+        svg{
+          height: $font-size-xl;
+        }
+        &.headerActionRedButton{
+          background: linear-gradient(90deg, #790000 0%, #ec1c24 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          svg{
+            height: $font-size-xxl;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .headerRightSide{
+      z-index: 2;
+      button{
+        font-weight: normal;
+        min-width: initial;
+      }
+      span{
+        cursor: pointer;
+      }
+      .headerRightNotificationIcon{
+        display: flex;
+        align-items: center;
+      }
+      .headerRightProfileImage{
+        position: relative;
+        height: 50px;
+        width: 50px;
+        border-radius: 500px;
+        box-shadow: 0 0 5px 1px $gray-400;
+        overflow: hidden;
+      }
+    }
+  }
+  .headerSubContentWrapper{
+    height: 0;
+    color: $white;
+    transition: height 0.3s ease-out;
+    overflow: hidden;
+    background: linear-gradient( 135deg, $primary-dark 0%, $primary-color 100%);
+    .headerSubContentTitle{
+      margin-left: 50px;
+    }
+    &.headerSubContentWrapperRedBg{
+      background: linear-gradient( 135deg, #790000 0%, #ec1c24 100%);
+      .headerSubContentForm{
+        .headerSubContentFormRadio{
+          &:hover,
+          &.headerSubContentFormRadioActive{
+            color: #790000;
+          }
+        }
+      }
+      &>button{
+        color: #ec1c24;
+      }
+    }
+    .headerSubContentForm{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      z-index: 1;
+      .headerSubContentFormLabel{
+        margin-right: 20px;
+      }
+      .headerSubContentFormRadio{
+        height: 5vh;
+        width: 5vh;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $white;
+        border-radius: 500px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 0 5px;
+        font-weight: bold;
+        &:hover,
+        &.headerSubContentFormRadioActive{
+          color: $primary-dark;
+          background-color: $white;
+          border: none;
+          box-shadow: 0 0 5px 0 $white;
+        }
+      }
+      .headerSubContentFormField{
+        height: 5vh;
+        margin: 0 10px;
+        background: transparent;
+        input{
+          background: transparentize($white, 0.05);
+        }
+      }
+      button{
+        margin-left: 20px;
+        min-width: inherit;
+        height: 5vh;
+        border: 1px solid $white;
+        color: $white;
+      }
+    }
+    &>button{
+      height: 100%;
+      background: $white;
+      border-radius: 0;
+      &:hover{
+        opacity: 0.96;
+      }
+    }
+  }
+}

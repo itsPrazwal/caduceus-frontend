@@ -1,0 +1,84 @@
+@import "src/Components/Styles/variables";
+
+.hostCarouselWrapper{
+  padding: $common-padding;
+  width: 100%;
+  overflow: visible;
+  .hostCarouselContentWrapper{
+    color: $white;
+    overflow: visible;
+    width: 100%;
+    transition: 0.5s;
+    &:hover{
+      width: 114%;
+    }
+    .hostCardWrapper{
+      height: 500px;
+      width: 23.5%;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      transition: 0.5s;
+      &:hover{
+        width: 38.5%;
+        .hostCardBlur{
+          height: 45%;
+        }
+        .hostCardContentWrapper{
+          height: 45%;
+          .hostCardTitle{
+            font-size: 60px;
+            line-height: 80px;
+          }
+          .hostCardCompany{
+            font-weight: bold;
+            font-size: $font-size-md;
+          }
+          .hostCardDescription{
+            opacity: 1;
+            transition: 0.5s;
+            transition-delay: 0.5s;
+          }
+        }
+      }
+      .hostCardBlur{
+        width: 100%;
+        height: 25%;
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+        transition: 0.5s;
+      }
+      &.notLastHostCard{
+        margin-right: 2%;
+      }
+      .hostCardContentWrapper{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: transparentize($primary-color, 0.5);
+        padding: 11px 22px;
+        cursor: pointer;
+        height: 25%;
+        transition: 0.5s;
+        .hostCardTitle{
+          margin: 0;
+          font-size: 35px;
+          transition: 0.5s;
+        }
+        .hostCardCompany{
+          transition: 0.5s;
+          font-size: $font-size-base;
+          margin: 10px 0;
+        }
+        .hostCardDescription{
+          margin: 10px 0;
+          opacity: 0;
+          max-height: 70px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
